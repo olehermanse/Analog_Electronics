@@ -1,0 +1,100 @@
+\subsection{Definitions}
+\begin{tabular}{| l | l | l |}
+\hline
+& Ohm, $\Omega$ & Siemens, S \\ \hline
+Real(DC) & \textbf{Resistance}, R & \textbf{Conductance}, G \\
+\hline
+Imaginary(AC) & Capacitive and Inductive \textbf{Reactance} $X_C, X_L$ 
+& \textbf{Susceptance}, B \\ 
+\hline
+Total(Combined)& \textbf{Impedance}, Z & \textbf{Admittance}, Y \\ 
+\hline
+\end{tabular}
+\newline
+\noindent
+\begin{tabularx}{\textwidth}{@{} 
+p{\dimexpr.24\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.26\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.25\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.25\linewidth-2\tabcolsep-1.3333\arrayrulewidth} @{}}
+Energy(Joule, J):           & $ E = F * d = \frac{kg*m^2}{s^2}$
+& Power(Watt, W):           & $ P = \frac{E}{t} = \frac{kg*m^2}{s^3}$\\
+Charge(Coloumb, C):         & $ Q = I * t = A*s $
+& Current(Ampere, A):       & $ I = \frac{Q}{t} = A$\\
+Voltage(Volt, V):           & $ V = \frac{P}{I} = \frac{kg*m^2}{A*s^3}$
+& Capacitance(Farad, F):    & $ C = \frac{Q}{V} = \frac{A^2s^4}{kg*m^2}$\\
+Resistance(Ohm, $\Omega$):  & $ R = \frac{V}{I} = \frac{kg*m^2}{A^2*s^3}$
+& Conductance(Siemens, S):  & $ G = \frac{1}{R} = \frac{A^2*s^3}{kg*m^2}$\\
+Frequency(Hertz, Hz):       & $ f = \frac{1}{T} = s^{-1}$
+& Period(Second, s):        & $ T = \frac{1}{f} = s$\\
+Inductance(Henry, H):       & $ L = \frac{N^2 \mu A}{I} = \frac{kg*m^2}{A^2*s^2}$
+& Induction voltage:        & $ v(t) = L*\frac{\delta i}{\delta t} $\\
+Voltage Gain:               & $ A = \frac{v_{out}}{v_{in}}$
+& Current Gain:             & $ \beta = \frac{i_{out}}{i_{in}} $ 
+\end{tabularx}
+
+\subsection{Resistors}
+\begin{tabularx}{\textwidth}{@{} 
+p{\dimexpr.24\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.26\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.25\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.25\linewidth-2\tabcolsep-1.3333\arrayrulewidth} @{}}
+Resistors in Series:        & $ R_{TOT} = R_1 + R_2 + ... + R_n $
+& $ \Rightarrow $           & $ G_{TOT} = \frac{1}{\frac{1}{G_1}+\frac{1}{G_2}+...+\frac{1}{G_n}} $ \\
+Resistors in Parallel:     & $ G_{TOT} = G_1 + G_2 + ... + G_n $
+& $ \Rightarrow $           & $ R_{TOT} = \frac{1}{\frac{1}{R_1}+\frac{1}{R_2}+...+\frac{1}{R_n}} $ \\
+Voltage Divider:            & $ V_x = V_s\frac{R_x}{R_{TOT}} $
+& & 
+\end{tabularx}
+
+\subsection{Capacitors and Inductors}
+\noindent\begin{tabularx}{\textwidth}{@{} 
+p{\dimexpr.24\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.26\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.25\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.25\linewidth-2\tabcolsep-1.3333\arrayrulewidth} @{}}
+Capacitors in parallel:    & $ C_{TOT} = C_1 + C_2 + ... + C_n $
+& Capacitors in Series:     & $ C_{TOT} = \frac{1}{\frac{1}{C_1}+\frac{1}{C_2}+...+\frac{1}{C_n}} $ \\
+Inductors in Series:        & $ L_{TOT} = L_1 + L_2 + ... + L_n $
+& Inductors in parallel:   & $ L_{TOT} = \frac{1}{\frac{1}{L_1}+\frac{1}{L_2}+...+\frac{1}{L_n}} $ \\
+Capacative Reactance:       & $ X_C = \frac{1}{2*\pi*f*C} $
+& Inductive Reactance:      & $ X_L = 2\pi*f*L $ \\
+Capacitor Current:          & $ I_C = \frac{\delta V}{\delta t} * C $
+& &\\
+\multicolumn{4}{@{} l @{}}{Capacitor charge/discharge: $ v(t) = V_F + (V_I - V_F) * e^\frac{t}{\tau} $ }
+\end{tabularx}
+
+\subsection{RC}
+\noindent\begin{tabularx}{\textwidth}{@{} 
+p{\dimexpr.24\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.26\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.25\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.25\linewidth-2\tabcolsep-1.3333\arrayrulewidth} @{}}
+Impedance:                  & $ Z = \sqrt{X_C^2 + R^2} $
+& Phase angle:              & $ \theta = arctan(\frac{X_C}{R}) $ \\
+\multicolumn{4}{@{} l @{}}{Time Constant: $\tau = RC$ \qquad 1RC: 63\% \qquad 2RC: 86\% \qquad 3RC: 95\% \qquad 4RC: 98\% \qquad 5RC: 99\%} \\
+\end{tabularx}
+
+\subsection{Bipolar Junction Transistors}
+\noindent\begin{tabularx}{\textwidth}{@{} 
+p{\dimexpr.24\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.26\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.25\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.25\linewidth-2\tabcolsep-1.3333\arrayrulewidth} @{}}
+Emitter Voltage:            & $ V_E = V_B - 0.7v $
+& Emitter Current:          & $ I_E = I_C + I_B $\\
+Collector Current:          & $ I_C = I_B * \beta $
+& (Int.) Emitter Resistance:& $ r_E = \frac{V_T}{I_E} \approx \frac{26mV}{I_E}$
+\end{tabularx}
+
+\subsection{Operational Amplifiers}
+\noindent \begin{tabularx}{\textwidth}{@{} 
+p{\dimexpr.24\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.26\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.25\linewidth-2\tabcolsep-1.3333\arrayrulewidth} 
+p{\dimexpr.25\linewidth-2\tabcolsep-1.3333\arrayrulewidth} @{}}
+Inverting amplifier:        & $ A = \frac{R_F}{R_I} $ 
+& Non-inverting amplifier:  & $ A = \frac{R_F}{R_GND} + 1 $ \\
+Buffer/Voltage follower:    & $ A = 1 $
+& $\Rightarrow$             & $ v_{out} = v_{in} $
+\end{tabularx}

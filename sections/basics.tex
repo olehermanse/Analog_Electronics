@@ -1,0 +1,97 @@
+\subsection{Water analogy}
+Electronics and electricity is about the movement of electrons through 
+different materials. The charge, voltage, current and resistance terms 
+can be conceptually hard to understand. An analogy is often used, and the 
+author prefers the \emph{water in pipes} analogy. Electrons or more generally 
+charge can be thought of as water in a system of pipes.
+\subsection{Charge}
+Every electron has the same charge, called the elementary charge:
+\[ e^- = -1.602*10^{-19} \text{C} \]
+Electrons are defined to have negative charge. The absence of an electron, 
+called a hole, is thought of as a charge carrier, even though it isn't a 
+particle. Holes can move through the atomic structure of a material, much in 
+the same way as electrons. Consequently a hole has precisely the opposite 
+charge of an electron:
+\[ e^+ = -e^- = 1.602*10^{-19} \text{C}\]
+As electrons are negatively charged per definition it can often be useful to 
+think of the movement of the positive charge carriers, the holes, instead. In 
+the water analogy charge can be thought of as the water.
+\subsection{Current}
+Current, the flow of charge is defined as:
+\begin{equation}
+    I = \frac{Q}{t}
+\end{equation}
+Where \(Q\) is amount of charge and \(t\) is time. Thus current is the amount 
+of charge passing a specific point in a unit of time (per second). In the 
+water analogy current is simply a current of water, the rate at which water 
+flows through a section of the pipe (liters / sec). The unit of current is 
+Ampere:
+\[ \text{A} = \frac{\text{C}}{\text{s}} \]
+Ampere is a base SI Unit, meaning that Coulomb and the other units used in 
+electronics are defined in terms of Ampere:
+\[ \text{C} = 1 \text{A} * 1 \text{s} \]
+The Coulomb is the summed charge of one Ampere for one second(the second is 
+also an SI base unit).
+\subsubsection{Measuring current}
+When measuring current it is important to connect your multimeter/amperemeter 
+in series with the point you want to measure. The current should flow through 
+the meter. The meter should have very low impedance so it does not affect the 
+circuit.
+\subsection{Voltage}
+Voltage is a measure of how much work is needed to move charge between two 
+places. Thus, voltage is a relative, not absolute, unit. Voltage is a 
+potential difference commonly from one point to a constant reference(ground). 
+Definition:
+\begin{equation}
+    V = \frac{W}{Q}
+\end{equation}
+The voltage difference between points A and B is defined by how much 
+work(energy, Joules) is required to move 1C of charge from A to B. In the 
+water analogy voltage can be thought of as pressure in the pipes. It is easy 
+to imagine the work required to push water from a pipe with lower pressure to 
+a pipe with higher pressure. Furthermore voltage can create current. When completing a circuit current will flow from a place with higher voltage(+) to a place with lower voltage(-).
+\subsubsection{Measuring Voltage}
+When measuring voltage difference between two points in a circuit it is 
+important to connect the multimeter/voltmeter in parallel. The meter will feel 
+the difference in voltage between the two probes. High impedance through the 
+meter is important. A meter with low impedance will draw current out of the 
+circuit and change its function. See sections on resistance and impedance.
+
+\subsection{Resistance}
+A resistance limits the flow of current. We can easily imagine that longer pipes, smaller pipes, small openings or even bends in a pipe system can limit the flow of water. The same is true for current in wires. The formula which 
+relates current through a resistance to applied voltage and resistance value is called Ohms law.
+\subsubsection{Ohms law} 
+The current through a resistance is proportional to the applied voltage and inversely proportional to the resistance value:
+\begin{equation} \label{eq:ohm}
+    I = \frac{V}{R} \Rightarrow V = R * I
+\end{equation}
+Impedance is a more general concept that includes resistance. Impedance is 
+denoted with the \(Z\) character. Ohms law still holds:
+\begin{equation}
+    V = Z * I
+\end{equation}
+Whenever the book, this article or the lecture slides mention impedance, you 
+can think it's like resistance. More on impedance later.
+\subsubsection{Measuring resistance}
+Measuring resistance is very similar to voltage, but it is important to 
+disconnect the resistor from the rest of your circuit. The multimeter will 
+send a small current through the resistor, so having other components 
+connected can reduce the measured resistance.
+
+\subsection{Voltage source}
+A voltage source, for example a battery, applies a voltage difference to two 
+points. An ideal voltage source will always deliver the desired voltage, regardless of how much current is drawn. Ideal voltage sources don't exist, 
+but we can often assume that the voltage source is ideal (as long as we stay within a specified current range).
+
+\subsection{Current source}
+Similar to a voltage source the current source delivers a specified current 
+regardless of required voltage. Current sources are not as common as voltage 
+sources.
+
+\subsection{Alternating and Direct Current(AC/DC)}
+Voltage, current or any other signal can be varying in time(alternating) or 
+constant over time(direct). This terminology is misleading as it usually has
+nothing to do with current. In electronics the AC or DC terms are most 
+commonly used about voltages. This terminology has been adopted in many 
+different sciences, such as mathematics, statistics, physics and signal 
+processing. 

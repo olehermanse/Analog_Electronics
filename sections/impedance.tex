@@ -1,0 +1,117 @@
+As mentioned earlier impedance is a more general form of \emph{resistance}. 
+Impedance consists of resistance and reactance. This chapter focuses on the mathematical basis of impedance and related terms. Some concepts, like 
+\emph{capacitors} and \emph{inductors}, are mentioned but not explained. These 
+are explained in depth in separate chapters later
+
+\subsection{Resistance}
+Resistance limits the current flow. For a given voltage and resistance Ohm's law 
+(\vref{eq:ohm}) can determine the current. Resistance does not vary with 
+frequency. Resistors have resistance. Ideal resistors have only resistance, and 
+no \emph{reactance}. In ideal resistors impedance should be constant for 
+different voltages, temperatures and frequencies. Practical resistors are not 
+perfect in these areas. The symbol for resistance is \(R\).
+\subsection{Reactance}
+Reactance can be found in capacitors and inductors, it is expressed in 
+ohms(\(\Omega\)) just like resistance, but is different as it changes with 
+frequency. The symbol for reactance is \(X\). For capacitive reactance 
+(capacitors) \(X_C\) is commonly used, while \(X_L\) is commonly used for 
+inductive reactance (inductors).
+\subsection{Complex impedance}
+Impedance is then a complex number, a sum of resistance and reactance:
+\begin{equation}\label{eq:impedance}
+    Z = R + jX
+\end{equation}
+For inductive reactance:
+\begin{equation}\label{eq:impedanceind}
+    Z = R + jX_L
+\end{equation}
+And for capacitive reactance:
+\begin{equation}\label{eq:impedancecap}
+    Z = R - jX_C
+\end{equation}
+The absolute value or magnitude of impedance is the length of the vector:
+\begin{equation}
+    |Z| = \sqrt{R^2+X^2}
+\end{equation}
+\subsection{Conductance}\label{sec:conductance}
+Conductance is the opposite of resistance:
+\begin{equation}
+    G = \frac{1}{R}
+\end{equation}
+It quantifies how well a wire, component or material can 
+\emph{conduct} electricity. Conductance is constant with respect to frequency. 
+Conductance is more complicated for components which also have reactance:
+\begin{equation}
+    G = \frac{R}{|Z|^2}
+\end{equation}
+See \vref{sec:admittance} to understand why.
+\subsection{Susceptance}\label{sec:susceptance}
+Susceptance is the opposite of reactance:
+\begin{equation}
+    B = \frac{-1}{X}
+\end{equation}
+Just like conductance susceptance is more complicated for components which 
+have both resistance and reactance:
+\begin{equation}
+    B = \frac{-X}{|Z|^2}
+\end{equation}
+Read \vref{sec:admittance} to better understand susceptance.
+\subsection{Admittance}\label{sec:admittance}
+Admittance is the opposite of impedance:
+\begin{equation}
+    Y = \frac{1}{Z}
+\end{equation}
+It is important to note that because of the imaginary unit it is not always 
+trivial to convert between impedance and admittance:
+\begin{equation}
+    Y = \frac{1}{Z} = \frac{1}{R + jX} = 
+    \frac{R-jX}{R^2+X^2} = \frac{R-jX}{|Z|^2}
+\end{equation}
+And for completeness, the difference between capacitors and inductors is shown:
+\begin{align*}
+    Y &= \frac{1}{Z} = \frac{1}{R - jX_C} = 
+    \frac{R+jX_C}{R^2+X_C^2} = \frac{R+jX}{|Z|^2}\\
+    Y &= \frac{1}{Z} = \frac{1}{R + jX_L} = 
+    \frac{R-jX_L}{R^2+X_L^2} = \frac{R-jX}{|Z|^2}
+\end{align*}
+The minus sign in impedance for capacitive reactance can also be confusing.
+In cases where an impedance is purely resistive or non-resistive this 
+conversion is simpler:
+\begin{align*}
+    Y_R &= \frac{1}{Z_R} = \frac{1}{R} = G\\
+    Y_C &= \frac{1}{Z_C} = \frac{1}{-jX_C} = j\frac{1}{X_C} = jB_C\\
+    Y_L &= \frac{1}{Z_C} = \frac{1}{jX_L} = j\frac{1}{-X_L} = -jB_L\\
+\end{align*}
+\subsection{Updated Ohm's law}
+With conductance and admittance we can express ohm's law in new, useful ways.
+\begin{align*}
+    V &= R*I, &\text{and}&&G &= \frac{1}{R}
+\end{align*}
+This is useful for expressing current through parallel resistances:
+\begin{equation}\label{eq:ohmconductance}
+    I = \frac{V}{R} \Rightarrow I = V*G
+\end{equation}
+Ohm's law also applies to impedance and admittance:
+\begin{equation}\label{eq:ohmimpedance}
+    V = R * I \Rightarrow V = Z * I
+\end{equation}
+\begin{equation}\label{eq:ohmadmittance}
+    I = V * G \Rightarrow I = V * Y
+\end{equation}
+These formulae are easy to derive/remember and incredibly useful in some types 
+of circuits.
+\subsection{Impedance and Admittance table}
+Below is a table that summarizes this section:\\
+\newline
+\begin{tabular}{| l | l | l |}
+\hline
+& Ohm, $\Omega$ & Siemens, S \\ \hline
+Real(DC) & \textbf{Resistance}, R & \textbf{Conductance}, G \\
+\hline
+Imaginary(AC) & Capacitive and Inductive \textbf{Reactance} $X_C, X_L$ 
+& \textbf{Susceptance}, B \\ 
+\hline
+Total(Combined)& \textbf{Impedance}, Z & \textbf{Admittance}, Y \\ 
+\hline
+\end{tabular}
+\subsection{Impedance vector - magnitude and phase}

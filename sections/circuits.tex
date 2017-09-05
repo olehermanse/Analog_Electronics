@@ -1,0 +1,97 @@
+\subsection{Fundamentals}
+A circuit consists of \emph{nodes}, \emph{paths}, \emph{loops}, \emph{branches}
+and \emph{components}. A \emph{component} can be a resistor, capacitor, 
+battery, LED etc. \emph{Components} are connected by wires, a \emph{node} 
+consists of all the wires that are connected together without any (significant) 
+impedance. There is one \emph{node} on each pin of a \emph{component}. Pins or 
+wires are in the same \emph{node} if they are directly connected, and thus 
+have the same voltage. A \emph{path} is a road (through \emph{components}) 
+where a current can flow. A \emph{loop} is a closed \emph{path} that connects 
+to itself. A closed circuit has one or more \emph{loops} and \emph{paths}.
+
+\subsection{Series circuits}
+When connecting resistors in series we sum their resistance values to get the 
+total:
+\begin{equation}
+    R_{TOT} = R_1 + R_2 + ... + R_n
+\end{equation}
+The same is true for non-resistive impedances.
+\subsection{Parallel circuits}
+When connecting resistors in parallel we sum their conductances to find total 
+conductance:
+\begin{equation}
+    G_{TOT} = G_1 + G_2 + ... + G_n
+\end{equation}
+This makes sense; connecting two wires or equal resistors will double the 
+conductance. We can easily find the resistance of two parallell resistors:
+\begin{equation}
+    R_{TOT} = \frac{1}{G_{TOT}} = \frac{1}{G_1 + G_2} = 
+    \frac{1}{\frac{1}{R_1} + \frac{1}{R_2}}
+\end{equation}
+Or the common \emph{shortcut}:
+\begin{equation}
+    R_{TOT} = \frac{R_1R_2}{R_1+R_2}
+\end{equation}
+\subsection{Kirchhoffs Voltage Law}
+The sum of all voltages going around a loop in a circuit is always 0.
+\begin{equation}
+    V_1 + V_2 + ... + V_n = 0
+\end{equation}
+This is because when we end up at the same node, we must also end up at the 
+original voltage level.
+\subsection{Kirchhoffs Current Law}
+The sum of currents into/out of a node is always 0.
+\begin{equation}
+    I_1 + I_2 + ... + I_n = 0
+\end{equation}
+This is because there has to come as much charge out of as into a node. Beware that sign(direction) of current is important!
+\subsection{Voltage divider}
+A voltage divider takes an input voltage and produces a lower output voltage, 
+that is a fraction of the input.
+\begin{equation}
+    V_x = V_S \frac{R_x}{R_{TOT}}
+\end{equation}
+Two or more resistors are used to split the voltage into different levels. The 
+relative values of the resistors decide the voltages. For example: if one 
+resistor is twice as big as the other, the voltage drop over it will be twice 
+as big as the voltage drop over the other. A potentiometer is often used to 
+create an adjustable output voltage.
+\subsubsection{Load}
+It is important to note that when connecting the voltage divider to a load the 
+output voltage changes(!). Adding a load to the output will decrease the 
+resistance down to ground and lower the voltage. A voltage divider with lower 
+resistor values is better at supplying a lot of current to a load without 
+changing output voltage (much).
+
+\subsection{Current divider}
+Current dividers are very similar but not as common as voltage dividers. 
+When connecting resistors in parallel the current is divided among them. Recall 
+the update ohm's law in \vref{eq:ohmconductance}:
+\begin{equation*}
+    I = V*G
+\end{equation*}
+Thus the current through one of the parallel resistors is:
+\begin{equation*}
+    I_X = V_{IN}*G_X
+\end{equation*}
+Total conductance is simply:
+\begin{equation*}
+    G_{TOT} = G_1 + G_2 + ... + G_n
+\end{equation*}
+And total current through all the resistors is:
+\begin{equation*}
+    I_{TOT} = V_{IN}*G_{TOT}
+\end{equation*}
+The more standard current divider formula is obtained by specifying input
+current instead of voltage:
+\begin{equation}
+    I_X = (V_{IN})*G_X = (R_{TOT}*I_{IN})*G_X = \frac{G_X}{G_{TOT}}*I_{IN}
+\end{equation}
+Or in terms of resistance:
+\begin{equation}\label{eq:currentdivider}
+    I_X = \frac{R_{TOT}}{R_X} * I_{IN}
+\end{equation}
+It is crucial to remember that this is a parallel circuit, so:
+\begin{equation*}
+    R_X \geq R_{TOT}
+\end{equation*}
