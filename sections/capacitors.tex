@@ -1,12 +1,46 @@
 \subsection{Physical properties}
-\subsection{Stored capacitor charge}
-\subsection{Time constant}
-\subsection{Capacitive reactance}
-\subsection{Voltage \& Current}
-\subsection{Parallell capacitors}
-\subsection{Series capacitors}
-\subsection{Practical capacitors}
-\subsection{RC circuits}
-\subsection{Capacitive voltage divider}
-\subsection{Power consumption in capacitors}
+In its simplest form, a capacitor is an electrical device constructed of two parallel conductive plates separated by an insulating material called the \emph{dielectric}.Capacitance is measured in units of farads (F). The amount of charge that a capacitor can store per unit of voltage across its plates is its capacitance, designated C.The more charge per unit of voltage that a capacitor can store, the greater its capacitance, as expressed by the following formula 
+\[C=\frac{Q}{V}\]
 
+
+\subsection{Stored capacitor charge}
+In the neutral state, bothe plates of a capacitor have an equal number of free electrons. when the capacitor is connected to a dc voltage source through a resistor, electrons are removed from plate \emph{A}, and an equal number are deposited to plate \emph{B}. As plate \emph{A} loses electrons and plate \emph{B} gains electrons, plate \emph{A} becomes potitive with respect to plate \emph{B}. During this charging process, electrons flow only through the connecting leads and the source. No electrons flow through the dielectric of the capacitor because it is an insulator. The movement of electrons ceases when the voltage across the capacitor equals the source voltage.
+
+\subsection{Time constant}
+The RC time constant is a fixed time interval that equals the prodcut of the resistance and the capacitance in a series RC ciruit. The time constant is expressed in units of seconds when resistance is in ohms and capacitance is in farads. It is symbolized by $\tau$, and the formula is 
+\[\tau = RC\]
+
+\subsection{Capacitive reactance}
+The opposition to sinusoidal current in a capacitor is called capacitive reactance. 
+the symbol for capacitive reactance is $X_C$, and its unit is ohm ($\Omega$). 
+$X_C$ is proportional to $\frac{1}{fC}$. It can be proven that the constant of proportonality that relates $X_C$ to $\frac{1}{fC}$ is $\frac{1}{2\pi}$, therefore the formula for capacitive reactance is 
+\[X_C = \frac{1}{2\pi fC}\]
+
+\subsection{Voltage \& Current}
+Current and voltage during charging and discharging, is ideally without curring through the dielectric of the capacitor because the dielectric is an insulating material. there is current from one plate to the other only through the external circuit.
+
+\subsection{Parallell capacitors}
+When capacitors are connected in parallel, the total capacitance is the sum of the individual capacitances because the effective plate area increases.the portion of the total charge that is stored by each capacitor depends on its capacitance value according to 
+\[Q =CV\]
+The charge stored by the capacitors together equals the total charge that was delivered from the source 
+\[Q_T = Q_1 + Q_2 + ... + Q_n\]
+
+Therefore, the total capacitance for capacitors in parallel is 
+\[C_T = C_1 + C_2 + ... + C_n\]
+
+\subsection{Series capacitors}
+When capacitors are connected in series, the total capacitance is less than the smallest capacitance value because the effective plate separation increases. the calculation of total series capacitance is analogous to the calculation of total resistance of parallel resistors 
+\[C_T = \frac{C_1 C_2}{C_1 + C_2}\]
+
+\subsection{Practical capacitors}
+Ideally, there is no energy loss in a capacitor and, thus, the true power (watts) is zero. However, in most capacitors tehre is some small energy loss due to leakage resistance.
+
+\subsection{RC circuits}
+In an RC circuit, the voltage and current during charging and discharging make an approximate 63\% change during each time-constant interval. 
+
+\subsection{Capacitive voltage divider}
+A resistive voltage divider is expressed in terms of a resistance ration, which is a ratio of oppositions. The equation for the voltage across a capacitor in a capacitive voltage divider can be written as 
+\[V_x = \left(\frac{X_C_x}{X_C_{(tot)}}\right) V_s\]
+
+\subsection{Power consumption in capacitors}
+Ideally, there is no power consumption in capacitors, but as physical conductors are not ideally, there is some leakage of power.
